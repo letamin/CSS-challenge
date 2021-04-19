@@ -346,7 +346,54 @@ h5 {
   display: none;
 }
 
-@media (max-width: 768px) {
+.svg-item {
+  width: 100%;
+  font-size: 16px;
+  margin: 0 auto;
+  animation: donutfade 1s;
+  padding: 0 12px;
+  fill: #01d16726;
+}
+
+.donut-ring {
+  stroke: #01d16726;
+}
+
+.donut-segment {
+  transform-origin: center;
+  stroke: var(--primary);
+}
+
+.donut-percent {
+  animation: donutfadelong 1s;
+}
+
+.donut-text {
+  fill: #111;
+}
+
+.donut-percent {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.donut-percent-days {
+  font-weight: 300;
+  font-size: 6px;
+}
+
+.svg-item {
+  max-width: 30%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 992px) {
+  .svg-item {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .wrapper-debit {
     max-width: 414px;
   }
@@ -466,15 +513,6 @@ h5 {
   }
 }
 
-.svg-item {
-  width: 100%;
-  font-size: 16px;
-  margin: 0 auto;
-  animation: donutfade 1s;
-  padding: 0 12px;
-  fill: #01d16726;
-}
-
 @keyframes donutfade {
   /* this applies to the whole svg item wrapper */
   0% {
@@ -485,25 +523,6 @@ h5 {
   }
 }
 
-@media (min-width: 992px) {
-  .svg-item {
-    width: 80%;
-  }
-}
-
-.donut-ring {
-  stroke: #01d16726;
-}
-
-.donut-segment {
-  transform-origin: center;
-  stroke: var(--primary);
-}
-
-.donut-percent {
-  animation: donutfadelong 1s;
-}
-
 @keyframes donutfadelong {
   0% {
     opacity: 0;
@@ -511,23 +530,4 @@ h5 {
   100% {
     opacity: 1;
   }
-}
-
-.donut-text {
-  fill: #111;
-}
-
-.donut-percent {
-  font-size: 10px;
-  font-weight: bold;
-}
-
-.donut-percent-days {
-  font-weight: 300;
-  font-size: 6px;
-}
-
-.svg-item {
-  max-width: 30%;
-  display: inline-block;
 }
